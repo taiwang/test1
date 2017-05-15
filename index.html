@@ -25,7 +25,7 @@ body:after {
   top: 50%;
   content: "";
   background-size: 100% 100%, 400px 400px;
-  animation: 2s move3 linear infinite;
+  animation: 2s move3, linear infinite;
 }
 
 /* ceiling */
@@ -38,7 +38,9 @@ html:after {
   
 }
 /* walls */
-body:before {
+body:before,
+body:after
+  {
   height: 200px;
   width: 1600px;
   margin: -100px -800px;
@@ -46,14 +48,7 @@ body:before {
     linear-gradient(90deg, rgba(0,0,0,0), rgba(10,20,10,.75) 50%, rgba(10,25,10,1)),
     url(asparagus.jpg);
 }
-body:after {
-  height: 200px;
-  width: 1600px;
-  margin: -100px -800px;
-  background-image:
-    linear-gradient(90deg, rgba(0,0,0,0), rgba(10,20,10,.75) 50%, rgba(10,25,10,1)),
-    url(all.jpg);
-  }
+
 /* ceiling */
 html:before {
   transform: translateY(-100px) rotateX(-90deg);  
